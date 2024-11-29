@@ -2,6 +2,6 @@ import "./styles/global.css"
 import "./styles/form.css"
 import "./styles/schedule.css"
 
-import './libs/dayjs'
+import './libs/dayjs.js'
 
-console.log(dayjs().format("HH:mm"))
+import './modules/form/submit.js'
