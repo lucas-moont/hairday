@@ -5,10 +5,12 @@ import { hoursClick } from "./hours-click.js";
 const hours = document.querySelector('#hours')
 
 export function hoursLoad({date}) {
+  hours.innerHTML = ''
+  
   const opening = openingHours.map((hour) => {
     const [scheduleHour] = hour.split(":")
 
-    const isHourAvailable = dayjs(date).add(scheduleHour, "hour").isBefore(dayjs())
+    const isHourAvailable = dayjs(date).add(scheduleHour, "hour").isAfter(dayjs())
     
 
     return {
@@ -31,7 +33,6 @@ export function hoursLoad({date}) {
     }else if(hour === "18:00"){
       hourHeaderAdd("Noite")
     }
-
     hours.append(li)
   })
 
