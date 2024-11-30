@@ -12,5 +12,5 @@ selectedDate.min = inputToday
 form.addEventListener('submit', (e) => {
   e.preventDefault()
 
-
+  
 })
