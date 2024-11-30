@@ -8,7 +8,7 @@ export function hoursLoad({date}) {
   const opening = openingHours.map((hour) => {
     const [scheduleHour] = hour.split(":")
 
-    const isHourAvailable = dayjs(date).add(scheduleHour, "hour").isAfter(dayjs())
+    const isHourAvailable = dayjs(date).add(scheduleHour, "hour").isBefore(dayjs())
     
 
     return {
