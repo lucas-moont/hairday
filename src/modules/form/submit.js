@@ -29,7 +29,7 @@ form.addEventListener('submit', async (e) => {
 
     const [hour] = hourSelected.innerText.split(':')
 
-    const when = dayjs(hourSelected.value).add(hour, "hour")
+    const when = dayjs(selectedDate.value).add(hour, "hour")
 
     const id = new Date().getTime()
 
